@@ -10,7 +10,8 @@
 
 local terminal    = "kitty"
 local fileManager = "dolphin"
-local menu         = "rofi -show run"
+local menu        = "rofi -show run"
+local browser     = "firefox"
 
 
 --------------------------------------------------
@@ -47,6 +48,7 @@ require("modules.keybindings")({
     terminal = terminal,
     fileManager = fileManager,
     menu = menu,
+    browser = browser,
 })
 
 
@@ -54,14 +56,14 @@ require("modules.keybindings")({
 -- 4. AUTOSTART
 --------------------------------------------------
 
--- Applications and services started with Hyprland.
--- Example:
---
--- hl.on("hyprland.start", function()
---     hl.exec_cmd(terminal)
---     hl.exec_cmd("nm-applet")
--- end)
+--------------------------------------------------
+-- 4. AUTOSTART
+--------------------------------------------------
 
+-- Start Hypridle when Hyprland starts.
+hl.on("hyprland.start", function()
+    hl.exec_cmd("hypridle")
+end)
 
 --------------------------------------------------
 -- 5. PERMISSIONS

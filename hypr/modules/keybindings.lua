@@ -20,6 +20,7 @@ return function(apps)
     hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(apps.menu))
     hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
     hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
+    hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(apps.browser))
 
     -- Navegação entre janelas
     hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
